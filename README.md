@@ -53,4 +53,6 @@
 ### HTML View of coverage
 `coverage html`
 
-Then run the inde.html from htmlcov folder
+Then run the index.html from htmlcov folder
+
+*Personal branches were for initial testing and development before subsystems were established
