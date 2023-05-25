@@ -3,6 +3,16 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import *
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+class DateTimeInput(forms.DateInput):
+    input_type = 'datetime-local'
+
+class IntegerInput(forms.NumberInput):
+    input_type = 'number'
+    range = '100'
+
 class AddMoneyForm(forms.Form):
     account_number = forms.CharField(max_length=200)
     amount = forms.FloatField()
@@ -27,7 +37,7 @@ class InmateForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'middle_initial': forms.TextInput(attrs={'size': '1', 'maxlength': '1'}),
-            'date_of_birth': forms.DateInput(attrs={'placeholder': 'YYYY-MM-DD'}),
+            'date_of_birth': DateInput(),
             'sex': forms.Select,
             'height_feet': forms.Select,
             'height_inches': forms.Select,
@@ -49,7 +59,7 @@ class InmateArrestingInfoForm(forms.ModelForm):
         model = InmateArrestInfo
         fields = '__all__'
         widgets = {
-            'arrest_timestamp': forms.DateTimeInput(attrs={'placeholder': 'YYYY-MM-DD HH:MM:SS'}),
+            'arrest_timestamp': DateTimeInput(),
         }
 
 class InmatePropertyForm(forms.ModelForm):
