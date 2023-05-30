@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'jims_project.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': 'jimslocal',
+         'NAME': 'db.sqlite3',
      }
     
 }
