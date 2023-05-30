@@ -47,6 +47,8 @@ class InmateForm(forms.ModelForm):
         labels = {
             'primary_add': 'Primary Address',
             'temp_add': 'Temporary Address',
+            'drivers_license_num': "Drivers License Number",
+            'drivers_license_state': "Drivers License State",
         }
 
 class InmateHealthSheetForm(forms.ModelForm):

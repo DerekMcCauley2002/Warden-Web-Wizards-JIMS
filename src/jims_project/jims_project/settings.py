@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'jims_project.wsgi.application'
 
 DATABASES = {
      'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'postgres',
-         'USER': 'postgres',
-         'PASSWORD': 'D-man12trex!',
-         'HOST': 'localhost',
-         'PORT': '5432',
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'jimslocal',
      }
     
 }
