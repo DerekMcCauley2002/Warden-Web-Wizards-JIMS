@@ -18,10 +18,7 @@ urlpatterns = [
     
     
         #base page for all incoming traffic without url specification
-        path(r'', views.user_login, name='login'),
-
-        #basic login page; also acts as landing page for now
-        #path('login/', views.user_login, name='login'),
+        path('login/', views.user_login, name='login'),
 
         #home page that will likely be variable for different user types
         path('home-page/', views.home_page, name='home_page'),

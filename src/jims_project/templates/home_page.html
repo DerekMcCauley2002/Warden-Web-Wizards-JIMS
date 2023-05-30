@@ -9,11 +9,24 @@
     
 {% endblock %}
 
-
+{% if user.is_authenticated %}
 <div class="text-center">
     <h1>Welcome {{ user.first_name }} {{ user.last_name }}</h1>
     <h3 style="margin-bottom: 10px;">Please navigate to subsequent pages using the nav bar.</h3>
 </div>
+{% else %}
+<div class="text-center">
+    <h1>Welcome to the Jail Information Management System (JIMS)</h1>
+    <h3 style="margin-bottom: 10px;">You are not logged in, please follow the link to log in.</h3>
+    <button id="loginButton" class="button" >Login</button>
+
+<script type="text/javascript">
+    document.getElementById("loginButton").onclick = function () {
+        location.href = "/login";
+    };
+</script>
+</div>
+{% endif %}
 
 
 {% endblock %}

@@ -83,10 +83,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     # A custom user will be one of four positions
     POSITION_CHOICES = (
-        ('officer', 'officer'),
-        ('booking_clerk', 'booking_clerk'),
-        ('supervisor', 'supervisor'),
-        ('release_clerk', 'release_clerk'),
+        ('Officer', 'Officer'),
+        ('Booking Clerk', 'Booking_Clerk'),
+        ('Supervisor', 'Supervisor'),
+        ('Release Clerk', 'Release_Clerk'),
     )
 
     #The feilds of a Custom User
