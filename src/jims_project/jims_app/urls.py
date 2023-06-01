@@ -16,7 +16,6 @@ from django.contrib import admin
 
 urlpatterns = [
     
-    
         #base page for all incoming traffic without url specification
         path('login/', views.user_login, name='login'),
 

@@ -83,7 +83,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     # A custom user will be one of four positions
     POSITION_CHOICES = (
-        ('Officer', 'Officer'),
+        #('Officer', 'Officer'),
         ('Booking Clerk', 'Booking_Clerk'),
         ('Supervisor', 'Supervisor'),
         ('Release Clerk', 'Release_Clerk'),
@@ -107,14 +107,15 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
-class Officer(models.Model):
+
+#class Officer(models.Model):
     """
     Create an Supervisor model 
     
     A Officer model IS-A Custom User that HAS-A officer_id
     """
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
-    officer_id = models.CharField(max_length=200, null=False)
+    #user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
+    #officer_id = models.CharField(max_length=200, null=False)
 
 class BookingClerk(models.Model):
     """
